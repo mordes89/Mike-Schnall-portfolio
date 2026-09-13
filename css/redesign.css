@@ -54,3 +54,28 @@ html{scroll-padding-top:98px}
 .contact-details{margin:24px auto 0;max-width:440px;line-height:1.8}.contact-details a{text-decoration:underline;text-underline-offset:3px}.contact-details strong{color:var(--text)}
 
 .page-share{margin-top:24px}.page-share button{display:inline-flex;align-items:center;gap:10px;cursor:pointer}.page-share p{overflow-wrap:anywhere}.page-share [hidden]{display:none}
+
+/* Optional support, separate from contact and portfolio sharing. */
+.coffee-support{border-top:1px solid var(--border-color);background:var(--bg-secondary)}.coffee-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:64px;align-items:center}.coffee-support h2{margin-bottom:22px;line-height:1.35}.coffee-support h2 em{font-family:Georgia, serif;font-variant-ligatures:none;display:inline-block;padding:0 .08em .18em 0;overflow:visible}.coffee-support p{max-width:550px}.coffee-support .coffee-note{font-size:13px;margin-top:18px}.coffee-support figure{margin:0;text-align:center}.coffee-support img{display:block;width:100%;height:auto;background:white}.coffee-support figcaption{color:var(--text-muted);font-size:12px;margin-top:12px}@media(max-width:640px){.coffee-layout{grid-template-columns:1fr;gap:28px}.coffee-support figure{width:min(280px,100%);justify-self:center}}
+/* Two coordinated palettes; photographs, QR codes and downloads retain their colors. */
+:root{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light;--bg-primary:#f7f3eb;--bg-secondary:#eae4d9;--text-primary:#182438;--text-muted:#4b586b;--accent:#765b11;--accent-hover:#594209;--border-color:#18243830;--overlay-bg:#f7f3ebf2}
+.theme-toggle{position:absolute;right:4%;top:19px;min-height:44px;min-width:72px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px;color:var(--text-primary);background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:6px;font:12px var(--font-body);cursor:pointer}
+.theme-toggle:hover{border-color:var(--accent)}.theme-icon{font-size:20px;line-height:1}
+#navbar .nav-toggle{margin-right:86px;min-height:44px}
+.portfolio-share{border-color:var(--border-color)}.contact-details strong{color:var(--text-primary)}
+/* Photo panels keep localized dark contrast in either palette. */
+#hero .btn-primary{background:#d4af37;color:#11131b;border-color:#d4af37}
+#hero a:focus-visible,.contact-banner a:focus-visible,.hero-pause:focus-visible{outline-color:#f5db83}
+[data-theme="light"] #footer{background:var(--bg-primary)}
+@media(max-width:600px){.theme-toggle{right:3%;top:7px;min-width:64px;font-size:11px;padding:6px;gap:4px}#navbar .nav-toggle{margin-right:0;min-height:28px}#navbar>.nav-brand{max-width:calc(100% - 144px);font-size:20px;white-space:normal;text-align:center}#navbar{height:124px}html{scroll-padding-top:140px}}
+
+/* Switch palette colors together, without a low-contrast intermediate fade. */
+body{transition:none}
+
+/* Current projects can grow through additional approved entries. */
+.current-projects{border-top:1px solid var(--border-color)}
+.current-project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px;margin-top:32px}
+.current-project-card{padding:30px;border:1px solid var(--border-color);background:var(--bg-secondary)}
+.current-project-card h3{font-size:30px;margin-bottom:16px}.current-project-card p{max-width:720px}.current-project-card .btn{margin-top:24px}.current-project-card .section-eyebrow{margin-bottom:12px}
+@media(max-width:600px){.current-project-card{padding:22px}.current-project-card .btn{max-width:100%}}

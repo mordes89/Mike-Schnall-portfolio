@@ -11,7 +11,6 @@
  // Reveal the name once, using the original template's typing cadence.
  const title=hero.querySelector('.hero-title');
  if(!motion.matches){const name=title.textContent;title.textContent='';[...name].forEach((letter,index)=>{const character=document.createElement('span');character.className='name-character';character.textContent=letter;character.setAttribute('aria-hidden','true');character.style.animationDelay=`${500+index*150}ms`;title.append(character);});}
- document.documentElement.dataset.theme='midnight';
  const menu=document.querySelector('#navToggle'), nav=document.querySelector('#navLinks');
  function close(){nav.classList.remove('active');menu.setAttribute('aria-expanded','false');}
  menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';nav.classList.toggle('active',open);menu.setAttribute('aria-expanded',String(open));});
