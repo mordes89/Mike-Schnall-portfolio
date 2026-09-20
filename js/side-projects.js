@@ -20,7 +20,9 @@ const mikeSideProjects = {
       url: 'https://photos.app.goo.gl/gWarHbQbCrKxVxrCA',
       // Public Open Graph cover as observed from the supplied album page.
       // It is not a permanence or automatic-refresh guarantee.
-      previews: ['https://lh3.googleusercontent.com/pw/AP1GczMWt3QZY_iRJCahSYxEmJX6DRYfSyoQxxhEcPd8T2K9OroFdyNWf2HJak_DgXe87LstLHSnSMPi3kP2dRWiSQeTkZ081fVBjEphlpC8kb3CDuknPph4=w600-h315-p-k'],
+      // The OG thumbnail is a landscape crop. This bounded public variant retains the
+      // full 3:4 photo so the existing 16:9 contain frame can show it without cropping.
+      previews: ['https://lh3.googleusercontent.com/pw/AP1GczMWt3QZY_iRJCahSYxEmJX6DRYfSyoQxxhEcPd8T2K9OroFdyNWf2HJak_DgXe87LstLHSnSMPi3kP2dRWiSQeTkZ081fVBjEphlpC8kb3CDuknPph4=w600'],
     },
   ],
 };
