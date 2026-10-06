@@ -2,8 +2,11 @@
 (() => {
   const root = document.documentElement;
   const key = 'mike-portfolio-theme';
-  let theme = 'midnight';
-  try { if (localStorage.getItem(key) === 'light') theme = 'light'; } catch {}
+  let theme = 'dark';
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark') theme = saved;
+  } catch {}
   root.dataset.theme = theme;
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('themeToggle');
@@ -16,7 +19,7 @@
     }
     render();
     button.addEventListener('click', () => {
-      root.dataset.theme = root.dataset.theme === 'light' ? 'midnight' : 'light';
+      root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
       try { localStorage.setItem(key, root.dataset.theme); } catch {}
       render();
     });
